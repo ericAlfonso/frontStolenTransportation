@@ -1,0 +1,20 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <a class="navbar-brand" href="#">Stolen Transportation</a>
+</nav>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="jumbotron col-sm-2 offset-1" *ngFor="let statistic of statistics">
+        <h1 class="display-2"> {{statistic.name}} </h1>
+        <p class="lead">Estadisticas por {{statistic.name}}.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <button class="btn btn-primary btn-lg" (click)="goToGraphs(statistic.id)" role="button">Ver</button>
+        </p>
+    </div>
+</div>
+<div class="offset-9 btn-group btn-group-lg" role="group">
+    <button type="button" class="btn btn-secondary" (click)="back()">Regresar</button>
+    <button type="button" class="btn btn-secondary" (click)="backToTop()">Top</button>
+</div>

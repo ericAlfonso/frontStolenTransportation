@@ -1,0 +1,20 @@
+<section class="row text-center">
+    <div class="card offset-sm-1" style="width: 20rem;">
+        <img class="card-img-top" src={{items.image}} width="200" height="200" alt="Card image cap">
+        <div class="card-block">
+            <div class="row" *ngIf="!isEditing">
+                <h4 class="card-title col-1 offset-2">{{items.mark}}</h4>
+                <button class="btn btn-link btn-sm col-3 offset-5" type="button" (click)="editName()">Editar</button>
+            </div>
+            <div class="row" *ngIf="isEditing">
+                <input type="text" class="col-6 offset-2" [(ngModel)]="mark">
+                <button class="btn btn-link btn-sm col-3 " type="button" (click)="save()">Guardar</button>
+            </div>
+            <div class="row">
+                <span class="card-text col-6 offset-1">{{items.km}} km</span>
+                <button class="btn btn-link btn-sm col-3 offset-1" type="button">Eliminar</button>
+            </div>
+            <button type="button" (click)="goToDetails(items.title)" class="btn btn-primary mt-3">Estadisticas</button>
+        </div>
+    </div>
+</section>

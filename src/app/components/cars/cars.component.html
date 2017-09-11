@@ -1,0 +1,13 @@
+<section class="offset-sm-1">
+    <h1>CARS</h1>
+    <hr>
+</section>
+<main class="container">
+    <div class="row">
+        <transportation-card class="ml-5 mt-5" [items]="item" *ngFor="let item of items"></transportation-card>
+    </div>
+</main>
+<br>
+<div class="offset-9 btn-group btn-group-lg" role="group">
+    <button type="button" class="btn btn-secondary" (click)="back()">Top</button>
+</div>
