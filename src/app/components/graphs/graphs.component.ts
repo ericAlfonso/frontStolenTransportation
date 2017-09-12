@@ -73,9 +73,9 @@ export class GraphsComponent implements OnInit{
       
     }
 
-    // back(){
-    //     this.router.navigate(['../'],{relativeTo: this.route})
-    // }
+    back(){
+        this.router.navigateByUrl('stolen-transportation')
+    }
 
   createGrapsForCarYear(years: any[]){
     let data = []

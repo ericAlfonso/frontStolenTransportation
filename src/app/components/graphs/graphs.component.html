@@ -1,5 +1,8 @@
-<div class="col-md-6" *ngIf="doughnutChartData.length && doughnutChartLabels.length">
+<div class="col-md-6 offset-3" *ngIf="doughnutChartData.length && doughnutChartLabels.length">
     <div style="display: block">
         <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
     </div>
+</div>
+<div class="offset-10">
+    <button type="button" class="btn btn-secondary" (click)="back()">Top</button>
 </div>
