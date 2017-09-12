@@ -8,11 +8,11 @@
             </div>
             <div class="row" *ngIf="isEditing">
                 <input type="text" class="col-6 offset-2" [(ngModel)]="mark">
-                <button class="btn btn-link btn-sm col-3 " type="button" (click)="save()">Guardar</button>
+                <button class="btn btn-link btn-sm col-3 " type="button" (click)="save(items.id, items.title)">Guardar</button>
             </div>
             <div class="row">
                 <span class="card-text col-6 offset-1">{{items.km}} km</span>
-                <button class="btn btn-link btn-sm col-3 offset-1" type="button">Eliminar</button>
+                <button *ngIf="!isEditing" class="btn btn-link btn-sm col-3 offset-1" type="button" (click)="deleteCard(items.id, items.title)">Eliminar</button>
             </div>
             <button type="button" (click)="goToDetails(items.title)" class="btn btn-primary mt-3">Estadisticas</button>
         </div>

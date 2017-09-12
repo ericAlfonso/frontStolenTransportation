@@ -149,14 +149,14 @@ export class GraphsComponent implements OnInit{
 
   createGrapsForMotorcycleDay(days: any[]){
     let data = []
-    months.map((month: any) => {
-      data.push(month.motorcycleAmount);
+    days.map((day: any) => {
+      data.push(day.motorcycleAmount);
     })
     this.doughnutChartData = [data];
     console.log(this.doughnutChartData);
 
-    months.map((month: any) => {
-      this.doughnutChartLabels.push(month.name);
+    days.map((day: any) => {
+      this.doughnutChartLabels.push(day.name);
     })
     this.doughnutChartType = 'doughnut';
   }

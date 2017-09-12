@@ -15,7 +15,7 @@ export class GrapsService {
     }
 
     getDayStatistics(id:number){
-        return this.http.get('/api/statistics/' + id + 'day');
+        return this.http.get('/api/statistics/' + id + '/day');
     }
 
 }
